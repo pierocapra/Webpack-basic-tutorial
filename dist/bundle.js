@@ -13,10 +13,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class HelloWorldButton {
+  buttonCssClass = 'hello-world-button';
+
   render() {
     const button = document.createElement('button');
     button.innerHTML = 'Hello World';
-    button.classList.add('hello-world-button');
+    button.classList.add(this.buttonCssClass);
     button.onclick = function(){
       const p = document.createElement('p');
       p.innerHTML = 'Hello world again!';
