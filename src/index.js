@@ -6,4 +6,10 @@ heading.render();
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();
 
-let ten = 10;
+if (process.env.NODE_ENV === 'production') {
+  console.log('Production mode');
+} else if (process.env.NODE_ENV === 'development') {
+  console.log('Development mode');
+}
+
+helloWorldButton.methodDontExist();
